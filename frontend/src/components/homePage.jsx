@@ -101,7 +101,7 @@ const HomePage = () => {
             } catch (err) {
                 console.log(err);
                 toast.error(err.data?.message || err.data?.error || err.error || err, {
-                    position: "top-center"
+                    position: "bottom-right"
                 });
             }
         }
@@ -123,7 +123,7 @@ const HomePage = () => {
                 console.log(err);
                 setSearchLoading(false)
                 toast.error(err.data?.message || err.data?.error || err.error || err, {
-                    position: "top-center"
+                    position: "bottom-right"
                 });
             }
         }
