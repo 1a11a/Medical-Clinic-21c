@@ -129,7 +129,7 @@ const HomePage = () => {
     return(
         <>
             
-            
+            <h2 style={{textAlign:'center', marginTop:'10px'}} >Medical Clinic <br /> Patient Admission Information System</h2>
             <Container style={{width:'100%', display:'flex', justifyContent:'center', marginBottom:'50px' , marginTop:'50px'}}>
             
                 <Row style={{width:'100%'}}>
