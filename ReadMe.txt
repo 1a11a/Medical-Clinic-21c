@@ -5,7 +5,7 @@
 
 ## Installation
 
-1. Unzip the folder and open the "Medical-Clinic" folder with visual studio
+1. Unzip the folder and open the "Medical-Clinic-21c" folder with visual studio
 
 2. Open a terminal and navigate to the frontend directory:
 
@@ -31,5 +31,5 @@
    go run main.go
 
 
-   If the backend server is not running at `http://localhost:4000`, open api.js file in Medical-Clinic/frontend/src/api and change the baseUrl value to the current server url.
+   If the backend server is not running at `http://localhost:4000`, open api.js file in Medical-Clinic-21c/frontend/src/api and change the baseUrl value to the current server url.
 
