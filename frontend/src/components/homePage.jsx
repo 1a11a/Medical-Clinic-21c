@@ -33,9 +33,7 @@ const HomePage = () => {
     const [addPatient, {isLoading}] = useAddPatientMutation();
     const [getPatients] = useGetPatientsMutation();
 
-    useEffect(() => {
-        
-    },[]);
+
 
     const handleDOBChange = (dob) => {
         const today = new Date();
@@ -265,8 +263,8 @@ const HomePage = () => {
                             >
                                 <InputBase
                                     sx={{ ml: 1, flex: 1 }}
-                                    placeholder="'To Search Patients Enter (Mobile No / NIC / Name)'"
-                                    inputProps={{ 'aria-label': 'To Search Patients Enter (Mobile No / NIC / Name)' }}
+                                    placeholder="'To Find Patients Enter (Mobile No / NIC / Name)'"
+                                    inputProps={{ 'aria-label': 'To Find Patients Enter (Mobile No / NIC / Name)' }}
                                     value={searchParam}
                                     onChange={(e) => setSearchParam(e.target.value)}
                                 />
