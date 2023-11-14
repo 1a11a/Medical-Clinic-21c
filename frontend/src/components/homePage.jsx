@@ -61,16 +61,22 @@ const HomePage = () => {
         e.preventDefault();
 
         if(!gender){
-            toast.error("Please select a gender")
+            toast.warn("Please select a gender", {
+                position: "top-center"
+            });
         }
         else if(differenceInDays(new Date(), new Date(dob)) <= 0){
-            toast.error("Please select a valid date of birth")
+            toast.warn("Please select a valid date of birth", {
+                position: "top-center"
+            });
             setDOB(" ");
         }
         else{
             try {
                 const res = await addPatient({ name: fname+" "+lname, address, email, nic, occupation, consultant, gender, age, dob: new Date(dob).toISOString(), bloodgroup: blood, mobile: parseInt(mobile), home: parseInt(homeNo), insurancecompany: insuranceCompany, insurancepolicyno: iPolicyNo, medicalcondition: medicalCondition }).unwrap();
-                toast.success('Patient Added Successfully!')
+                toast.success('Patient Added Successfully!', {
+                    position: "top-center"
+                });
 
                 setFName('')
                 setLName('')
@@ -94,7 +100,9 @@ const HomePage = () => {
 
             } catch (err) {
                 console.log(err);
-                toast.error(err.data?.message || err.data?.error || err.error || err);
+                toast.error(err.data?.message || err.data?.error || err.error || err, {
+                    position: "top-center"
+                });
             }
         }
     }
@@ -114,11 +122,15 @@ const HomePage = () => {
             } catch (err) {
                 console.log(err);
                 setSearchLoading(false)
-                toast.error(err.data?.message || err.data?.error || err.error || err);
+                toast.error(err.data?.message || err.data?.error || err.error || err, {
+                    position: "top-center"
+                });
             }
         }
         else{
-            toast.error("Enter Patient Mobile No / NIC / Name To Search")
+            toast.warn("Enter Patient Mobile No / NIC / Name To Search", {
+                position: "top-center"
+            });
         }
 
     }
