@@ -1,4 +1,4 @@
-## Prerequisites
+## you need 
 
 - Node.js (https://nodejs.org/)
 - Go (https://golang.org/) - v 1.21.3
